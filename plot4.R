@@ -9,7 +9,8 @@ sub_metering_2 <- as.numeric(paste((proj_data$Sub_metering_2)))
 sub_metering_3 <- as.numeric(paste((proj_data$Sub_metering_3)))
 global_reactive_power <- as.numeric(paste((proj_data$Global_reactive_power)))
 
-png(file = "plot4.png", width = 480, height = 480, units = "px")
+png(file = "plot4.png", width = 480, height = 480, units = "px",
+    bg = "transparent")
 par(mfrow = c(2, 2))
 plot(proj_data$DateTime, global_active_power, type = "l", col = "black",
      xlab = "", ylab = "Global Active Power (kilowatts)")
